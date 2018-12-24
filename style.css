@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.item {
+    flex-grow: 1;
+    border: solid 5px black;
+    color: black;
+    font-size: 20px;
+    flex-basis: 300px;
+    padding: 20px;
+}
+
+#red {
+    background-color: red;
+}
+
+#blue {
+    background-color: blue;
+    flex-grow: 2;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
