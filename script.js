@@ -50,7 +50,16 @@ let list = {
     value: 2,
     rest: {
       value: 3,
-      rest: null
+      rest: {
+        value: 4,
+        rest: {
+          value: 5,
+          rest: {
+            value: 6,
+            rest: null
+          }
+        }
+      }
     }
   }
 }
@@ -63,5 +72,22 @@ function arrayToList(items, n = 0) {
       value: items[n],
       rest: arrayToList(items, n + 1)
     }
+  }
+}
+
+function listToArray(list) {
+  let result = [];
+  while (list.rest) {
+    result.push(list.value);
+    list = list.rest;
+  }
+  result.push(list.value);
+  return result;
+}
+
+function prepend(value, list) {
+  return {
+    value: value,
+    rest: list
   }
 }
