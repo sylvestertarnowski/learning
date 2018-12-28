@@ -34,11 +34,11 @@ let example = createArrayFromRange(1, 10);
 
 function reverseArrayInPlace(array) {
   let arrayLength = array.length;
-  for (let i = 0; i < arrayLength*2; i+=2) {
+  for (let i = 0; i < arrayLength * 2; i += 2) {
     array.unshift(array[i]);
   }
   arrayLength = array.length;
-  for (let i = arrayLength-1; i >= arrayLength/2; i--) {
+  for (let i = arrayLength - 1; i >= arrayLength / 2; i--) {
     array.pop(array[i]);
   }
   return array;
@@ -51,6 +51,17 @@ let list = {
     rest: {
       value: 3,
       rest: null
+    }
+  }
+}
+
+function arrayToList(items, n = 0) {
+  if (n == items.length) {
+    return null;
+  } else {
+    return {
+      value: items[n],
+      rest: arrayToList(items, n + 1)
     }
   }
 }
