@@ -45,17 +45,17 @@ function reverseArrayInPlace(array) {
 }
 
 let list = {
-  value: 1,
+  value: "big",
   rest: {
-    value: 2,
+    value: "cig",
     rest: {
-      value: 3,
+      value: "dig",
       rest: {
-        value: 4,
+        value: "fig",
         rest: {
-          value: 5,
+          value: "gig",
           rest: {
-            value: 6,
+            value: "hig",
             rest: null
           }
         }
@@ -90,4 +90,9 @@ function prepend(value, list) {
     value: value,
     rest: list
   }
+}
+
+function nth(list, item) {
+  let array = listToArray(list);
+  return array[item];
 }
