@@ -100,7 +100,7 @@ function nth(list, item) {
 function deepEqual(a, b) {
   if (typeof(a) == typeof(b)) {
     if (typeof(a) == "object") {
-      return true;
+      
     } else {
       if (a === b) {
         return true;
