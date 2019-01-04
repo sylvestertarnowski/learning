@@ -100,7 +100,15 @@ function nth(list, item) {
 function deepEqual(a, b) {
   if (typeof(a) == typeof(b)) {
     if (typeof(a) == "object") {
-      
+      let keysOfA = Object.keys(a);
+      let keysOfB = Object.keys(b);
+      for (let i = 0; i < Math.max(keysOfA.length, keysOfB.length); i++) {
+        if (keysOfA[i] != keysOfB[i]) {
+          return false;
+        } else {
+          return true;
+        }
+      }
     } else {
       if (a === b) {
         return true;
