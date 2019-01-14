@@ -154,3 +154,15 @@ function switchIntoIfElse(){
     alert( 'We hope that this page looks ok!' );
   }
 }
+
+function checkAge(age) {
+  // if (age > 18) {
+  //   return true;
+  // } else {
+  //   return confirm('Do you have your parents permission to access this page?');
+  // }
+
+  // return (age > 18) ? true : confirm('Do you have your parents permission to access this page?');
+  return (age > 18) || confirm('Do you have your parents permission to access this page?');
+}
+
