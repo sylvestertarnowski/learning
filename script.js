@@ -128,3 +128,45 @@ for(let i = 2; i <= 10; i++) {
     console.log(i);
   }
 }
+
+function replaceFor(){
+  let i = 0;
+  while(i < 3) {
+    alert(`number ${i}`);
+    i++;
+  }
+}
+
+function whileLessThanHundred() {
+  let i = prompt("Give me number");
+  while(i <= 100) {
+    i = prompt("Give me another number");
+  }
+}
+
+switch (browser) {
+  case 'Edge':
+    alert( "You've got the Edge!" );
+    break;
+
+  case 'Chrome':
+  case 'Firefox':
+  case 'Safari':
+  case 'Opera':
+    alert( 'Okay we support these browsers too' );
+    break;
+
+  default:
+    alert( 'We hope that this page looks ok!' );
+}
+
+function switchIntoIfElse(){
+  let browser = prompt("What browser are you using?");
+  if (browser == "Edge"){
+    alert( "You've got the Edge!" );
+  } else if (browser == "Chrome" || "Firefox" || "Safari" || "Opera") {
+    alert( 'Okay we support these browsers too' );
+  } else {
+    alert( 'We hope that this page looks ok!' );
+  }
+}
