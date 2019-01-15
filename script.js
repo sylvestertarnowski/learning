@@ -174,13 +174,13 @@ function min(a, b) {
   }
 }
 
-function pow(num, pow) {
-  if (pow == 0) {
+function power(num, exponent) {
+  if (exponent == 0) {
     return 1;
-  } else if (pow == 1) {
+  } else if (exponent == 1) {
     return num;
   } else {
-    return num * pow(num, pow - 1);
+    return num * power(num, exponent - 1);
   }
 }
 
