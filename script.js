@@ -177,8 +177,6 @@ function min(a, b) {
 function power(num, exponent) {
   if (exponent == 0) {
     return 1;
-  } else if (exponent == 1) {
-    return num;
   } else {
     return num * power(num, exponent - 1);
   }
