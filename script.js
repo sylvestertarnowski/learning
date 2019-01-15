@@ -166,3 +166,21 @@ function checkAge(age) {
   return (age > 18) || confirm('Do you have your parents permission to access this page?');
 }
 
+function min(a, b) {
+  if (a < b) {
+    return a;
+  } else {
+    return b;
+  }
+}
+
+function pow(num, pow) {
+  if (pow == 0) {
+    return 1;
+  } else if (pow == 1) {
+    return num;
+  } else {
+    return num * pow(num, pow - 1);
+  }
+}
+
